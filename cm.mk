@@ -9,7 +9,8 @@ TARGET_SCREEN_WIDTH := 800
 $(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/com.cyanogenmod.nfc.enhanced.xml:system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml
 
 # Inherit device configuration
 $(call inherit-product, device/asus/grouper/aosp_grouper.mk)
