@@ -124,3 +124,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/asus/grouper/asus-vendor.mk)
 $(call inherit-product, vendor/broadcom/grouper/broadcom-vendor.mk)
 $(call inherit-product, vendor/invensense/grouper/invensense-vendor.mk)
+
+# Ubuntu overlay files
+PRODUCT_COPY_FILES += \
+    device/asus/grouper/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules \
+    device/asus/grouper/ubuntu/android.conf:system/halium/etc/ubuntu-touch-session.d/android.conf
